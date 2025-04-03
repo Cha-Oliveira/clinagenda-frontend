@@ -17,7 +17,7 @@ export default createVuetify({
       dark: {
         dark: true,
         colors: {
-          primary: colors.green.darken1
+          primary: colors.teal.darken1
         }
       }
     }
