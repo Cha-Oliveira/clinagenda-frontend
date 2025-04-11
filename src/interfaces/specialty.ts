@@ -18,4 +18,5 @@ export type GetSpecialtyListResponse = {
 
 export type SpecialtyForm = {
   name: ISpecialty['name']
+  scheduleDuration: ISpecialty['scheduleDuration']
 }

@@ -10,6 +10,7 @@ import type {
 import request from '@/engine/httpClient'
 import { useToastStore } from '@/stores'
 
+
 const toastStore = useToastStore()
 const isLoadingList = ref<boolean>(false)
 const filterName = ref<GetSpecialtyListRequest['name']>('')

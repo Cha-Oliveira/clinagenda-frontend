@@ -18,7 +18,8 @@ const id = route.params.id
 const pageMode = id ? PageMode.PAGE_UPDATE : PageMode.PAGE_INSERT
 
 const form = ref<SpecialtyForm>({
-  name: ''
+  name: '',
+  scheduleDuration: ''
 })
 
 const pageTitle = computed(() => {
@@ -82,6 +83,9 @@ onMounted(() => {
       <v-row>
         <v-col cols="6">
           <v-text-field v-model.trim="form.name" label="Nome" hide-details />
+        </v-col>
+        <v-col cols="4">
+          <v-text-field v-model.trim="form.scheduleDuration" label="Duração" hide-details />
         </v-col>
       </v-row>
     </v-form>

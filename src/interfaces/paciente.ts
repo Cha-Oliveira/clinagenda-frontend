@@ -1,17 +1,20 @@
+import type { IStatus } from './status'
+
 export interface IPaciente {
   id: number
   name: string
-  PhoneNumber: string
-  DocumentNumber: string
-  BirthDate: string
-  StatusId: string
-  StatusName: string
+  documentNumber: string
+  phoneNumber: string
+  birthDate: string
+  status: IStatus
 }
 
 export type GetPacienteListRequest = {
   itemsPerPage: number
   page: number
   name: IPaciente['name']
+  documentNumber: IPaciente['documentNumber']
+  statusId: IStatus['id'] | null
 }
 
 export type GetPacienteListResponse = {
@@ -21,4 +24,8 @@ export type GetPacienteListResponse = {
 
 export type PacienteForm = {
   name: IPaciente['name']
+  documentNumber: IPaciente['documentNumber']
+  phoneNumber: IPaciente['phoneNumber']
+  birthDate: IPaciente['birthDate']
+  statusId: IPaciente['id'] | null
 }
